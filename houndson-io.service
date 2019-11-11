@@ -1,0 +1,11 @@
+[Unit]
+Requires=network.target houndson-io.socket
+After=network.target
+
+[Service]
+ExecStart=/home/ajm/workspaces/houndson-io/bin/houndson-io
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

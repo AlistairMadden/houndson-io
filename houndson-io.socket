@@ -1,0 +1,10 @@
+[Unit]
+PartOf=foo.service
+
+[Socket]
+ListenStream=/tmp/houndson-io.sock
+SocketUser=www-data
+SocketGroup=www-data
+
+[Install]
+WantedBy=sockets.target
