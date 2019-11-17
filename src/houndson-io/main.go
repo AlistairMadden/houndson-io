@@ -99,6 +99,11 @@ func main() {
 	flag.StringVar(&dir, "dir", "static/", "the directory to serve files from. Defaults to the static dir")
 	flag.Parse()
 
+	baseDir := "/home/ajm/workspaces/houndson-io"
+	staticDir := filepath.Join(baseDir, "static")
+
+	println(staticDir)
+
 	commonPageData := commonPageData{
 		BaseAddress: "https://houndson.io",
 	}
@@ -110,7 +115,7 @@ func main() {
 	var router = mux.NewRouter()
 	router.HandleFunc("/", siteHandler.homepageHandler)
 	router.HandleFunc("/about", siteHandler.aboutHandler)
-	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir(dir))))
+	router.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir(staticDir))))
 
 	// Create server
 	server := &http.Server{
