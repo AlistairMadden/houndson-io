@@ -1,6 +1,34 @@
-.full_page_centered_content{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.content-container {
+  position: relative;
+  height: 100%;
+}
+
+.full-page-centered {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jumbotron.full-page-centered {
+  margin: 0;
+}
+
+.nav {
+  position: absolute;
+  bottom: 0rem;
+  width: 100%;
+  height: 4.75rem;
+  padding: 1rem;
+  transition: background-color 0.5s ease;
+}
+
+.nav:hover {
+  background-color: white;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
 }

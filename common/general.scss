@@ -1,3 +1,16 @@
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
+
 html, body {
     height: 100%;
 }
+
+.user-icon {
+    @extend %fa-icon;
+    @extend .fas;
+  
+    &:before {
+      content: fa-content($fa-var-user);
+    }
+  }
+  

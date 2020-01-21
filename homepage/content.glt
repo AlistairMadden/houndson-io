@@ -1,15 +1,21 @@
 {{ define "content" }}
-<div class="jumbotron full_page_centered_content">
-    <h1>Alistair J Madden</h1>
+<div class="content-container">
+    <div class="jumbotron full-page-centered">
+        <h1>Alistair J Madden</h1>
+    </div>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
 </div>
-<h1>{{.PageTitle}}</h1>
-<ul>
-    {{- range .Todos -}}
-        {{- if .Done -}}
-            <li class="done">{{.Title}}</li>
-        {{- else -}}
-            <li>{{.Title}}</li>
-        {{- end -}}
-    {{- end -}}
-</ul>
 {{ end }}
