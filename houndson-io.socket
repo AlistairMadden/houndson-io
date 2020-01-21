@@ -1,5 +1,5 @@
 [Unit]
-PartOf=foo.service
+PartOf=houndson.io.service
 
 [Socket]
 ListenStream=/tmp/houndson-io.sock
